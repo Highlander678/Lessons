@@ -6,17 +6,25 @@ using namespace std;
 class Point
 {
 public:
+	
+	
+	
+	Point() {
+	};
 	Point(int Size);
-	int operator+(Point & other);
-	void operator=(Point &other);
+	Point(Point &other);
+	
+	Point operator+(const Point &other);
+	
 	void GetArr();
 	void GetSummTMP();
 	~Point();
 
 private:
+
 	int Size;
 	int *arr;
-	int *tmp;
+	
 };
 
 Point::Point(int Size)
@@ -29,26 +37,29 @@ Point::Point(int Size)
 	}
 }
 
-int Point::operator+(Point & other)
+Point::Point(Point & other)
 {
-	int Size;
-	if (this->Size >= other.Size) Size = this->Size;
-	else Size = other.Size;
-	this->tmp = new int[Size];
-
-	for (int i = 0; i < Size; i++)
+	this->Size = other.Size;
+	this->arr = new int[this->Size];
+	for (int i = 0; i < this->Size; i++)
 	{
-		tmp[i] = this->arr[i] + other.arr[i];
+		this->arr[i] = other.arr[i];
 	}
-
-
-	return 0;
 }
 
-void Point::operator=(Point & other)
+ Point Point::operator+(const Point & other)
 {
+	 if (this->Size >= other.Size) {}
+	else this->Size = other.Size;
 
+	for (int i = 0; i < this->Size; i++)
+	{
+		this->arr[i] = this->arr[i] + other.arr[i];
+	}
+	return *this;
 }
+
+
 
 void Point::GetArr()
 {
@@ -58,18 +69,12 @@ void Point::GetArr()
 	}
 }
 
-void Point::GetSummTMP()
-{
-	for (int i = 0; i < this->Size; i++)
-	{
-		cout << "arr[" << i << "] =\t" << this->tmp[i] << endl;
-	}
-}
+
 
 Point::~Point()
 {
 	delete[] this->arr;
-	delete[] this->tmp;
+	
 }
 
 int main()
@@ -78,16 +83,20 @@ int main()
 	cin >> Size;
 	Point A(Size);
 	Point B(Size);
+	//Point C(Size);
+
 	setlocale(LC_ALL, "ru");
 	cout << "Массива объекта ============================== А ======================" << endl;
 	A.GetArr();
 	cout << "Массива объекта ============================== B ======================" << endl;
 	B.GetArr();
-
 	A + B;
+	Point C(A);
 
-	cout << "Результат суммы ============================== А ======================" << endl;
-	A.GetSummTMP();
+	
+	cout << "Результат суммы ============================== C ======================" << endl;
+	C.GetArr();
+
 	system("pause");
 
 	return 0;
