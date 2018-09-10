@@ -116,6 +116,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Class.cpp" />
+    <ClCompile Include="Peregruzka_operatorov.cpp" />
     <ClCompile Include="Pointer.cpp" />
     <ClCompile Include="Ref.cpp" />
     <ClCompile Include="Arr.cpp" />
