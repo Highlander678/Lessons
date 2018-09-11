@@ -21,9 +21,6 @@
     <ClCompile Include="Ref.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="Arr.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
     <ClCompile Include="Arr_copy.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>

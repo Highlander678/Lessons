@@ -121,7 +121,6 @@
     <ClCompile Include="Pointer.cpp" />
     <ClCompile Include="PostPrefiksSumm.cpp" />
     <ClCompile Include="Ref.cpp" />
-    <ClCompile Include="Arr.cpp" />
     <ClCompile Include="Arr_copy.cpp" />
     <ClCompile Include="Func_Pointer.cpp" />
     <ClCompile Include="Constructor_class.cpp" />
