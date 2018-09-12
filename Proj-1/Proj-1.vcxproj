@@ -117,6 +117,7 @@
   <ItemGroup>
     <ClCompile Include="Class.cpp" />
     <ClCompile Include="FriendClass.cpp" />
+    <ClCompile Include="innerClass.cpp" />
     <ClCompile Include="PeregruzkaClojenya.cpp" />
     <ClCompile Include="Peregruzka_operatorov.cpp" />
     <ClCompile Include="Pointer.cpp" />
