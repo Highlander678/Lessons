@@ -1,11 +1,40 @@
-#include <iostream>
-//создать внешний Image и внутренний класс Pixel
-//Массив объектов класса
+#include<iostream>
+#include<string>
+
+using namespace std;
+
+class Image {
+public:
+	Image()
+	{
+
+	}
+	GetImage()
+	{
+		
+	}
+private:
+
+	
+};
+
+class Pixel {
+public:
+	Pixel(int x, int y, int z)
+	{
+		this->x = x;
+		this->y = y;
+		this->z = z;
+	}
+private:
+	int x;
+	int y;
+	int z;
+};
+
 int main()
 {
-	const int Size = 5;
-	Pixel arr[Size]{
-		Pixel (1,2,3),
-		Pixel (4,5,65)
-	};
+	Pixel a(1, 1, 1);
+
+	return 0;
 }
