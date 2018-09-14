@@ -1,11 +1,42 @@
 #include <iostream>
+#include<string>
+using namespace std;
 //создать внешний Image и внутренний класс Pixel
 //Массив объектов класса
+
+class Human {
+
+public:
+	void think()
+	{
+		brain.calc();
+	}
+private:
+	class Brain {
+
+	public:
+		Brain()
+		{
+			x = 0;
+		}
+		void calc()
+		{
+			x++;
+			cout << "Думаю X++ = " << x << endl;
+		}
+	private:
+		int x;
+	};
+	Brain brain;
+};
+
+
 int main()
 {
-	const int Size = 5;
-	Pixel arr[Size]{
-		Pixel (1,2,3),
-		Pixel (4,5,65)
-	};
+	Human Alex;
+	setlocale(LC_ALL, "ru");
+	Alex.think();
+
+	system("pause");
+	return 0;
 }
