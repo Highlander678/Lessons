@@ -45,8 +45,5 @@
     <ClCompile Include="PeregruzkaClojenya.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="InnerClass.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
   </ItemGroup>
 </Project>
