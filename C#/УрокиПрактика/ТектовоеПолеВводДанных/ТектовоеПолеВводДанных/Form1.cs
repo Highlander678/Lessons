@@ -3,9 +3,6 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ТектовоеПолеВводДанных
@@ -25,7 +22,17 @@ namespace ТектовоеПолеВводДанных
 
         private void button1_Click(object sender, EventArgs e)
         {
+            if (double.TryParse(textBox1.Text, out double X))
+            {
+                label1.Text = Convert.ToString(Math.Sqrt(double.Parse(textBox1.Text)));
+            }
+            else
+            {
+                label1.ForeColor = Color.Red;
+                label1.Text = "Необходимо вводить только числа";
+            }
 
+            
         }
     }
 }
