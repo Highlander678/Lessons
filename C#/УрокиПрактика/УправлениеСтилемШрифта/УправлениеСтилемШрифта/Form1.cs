@@ -26,15 +26,16 @@ namespace УправлениеСтилемШрифта
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkBox1.Checked)
-            {
-                label1.Font = new Font("Courier New", 12.0F, FontStyle.Bold);
+            label1.Font = new Font("Courier New", 12.0F, label1.Font.Style ^ FontStyle.Bold);
+            //if (checkBox1.Checked)
+            //{
+            //    label1.Font = new Font("Courier New", 12.0F, FontStyle.Bold);
 
-            }
-            else
-            {
-                label1.Font = new Font("Courier New", 12.0F, FontStyle.Regular);
-            }
+            //}
+            //else
+            //{
+            //    label1.Font = new Font("Courier New", 12.0F, FontStyle.Regular);
+            //}
 
         }
     }
