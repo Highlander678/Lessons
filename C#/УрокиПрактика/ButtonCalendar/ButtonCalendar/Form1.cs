@@ -29,8 +29,9 @@ namespace ButtonCalendar
 
         private void button1_Click(object sender, EventArgs e)
         {
-            dateTimePicker1.Focus();
-            SendKeys.Send("{F4}");
+   
+            //dateTimePicker1.Focus();
+            //SendKeys.Send("{F4}");
         }
     }
 }
