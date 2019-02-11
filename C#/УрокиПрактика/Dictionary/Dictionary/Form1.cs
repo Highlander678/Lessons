@@ -16,5 +16,25 @@ namespace Dictionary
         {
             InitializeComponent();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            label1.Text = null;
+
+            var Месяцы = new Dictionary<String, int>();
+            Месяцы["Январь"] = 1;
+            Месяцы.Add("Февраль", 2);
+            Месяцы["Март"] = 3;
+            Месяцы.Add("Апрель", 4);
+            Месяцы["Май"] = 5;
+            Месяцы.Add("Июнь", 6);
+
+            foreach (var Месяц in Месяцы)
+            {
+                label1.Text += Месяц.Key + " - " + Месяц.Value + "\n";
+            }
+
+
+        }
     }
 }
