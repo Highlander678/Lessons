@@ -1,0 +1,82 @@
+this.Text = "Простой RTF-редактор"; 
+richTextBox1.Clear();
+
+openFileDialog1.FileName = @"D:\Text2.txt"; 
+saveFileDialog1.Filter = "Файлы RTF (*.RTF)|*.RTF";
+
+открытьВФорматеRTFToolStripMenuItem.Click += new EventHandler(ОТКРЫТЬ);
+
+void ОТКРЫТЬ(Object sender, EventArgs e){
+var t = (ToolStripMenuItem)sender; 
+            // Читаем надпись на пункте меню: 
+            var Формат = t.Text;
+}
+
+openFileDialog1.ShowDialog();
+if (openFileDialog1.FileName == null) return;
+richTextBox1.LoadFile(openFileDialog1.FileName); //читаем и загружаем файл непосредственно richTextBox1
+
+if (Формат == "Открыть в формате Win1251"){ 
+                { 
+                    openFileDialog1.Filter = 
+                                    "Текстовые файлы (*.txt)|*.txt";
+ openFileDialog1.ShowDialog(); 
+                    if (openFileDialog1.FileName == null) return; 
+                    richTextBox1.LoadFile(openFileDialog1.FileName, 
+                                          RichTextBoxStreamType.PlainText); 
+                } 
+                richTextBox1.Modified = false; 
+} 
+
+richTextBox1.SaveFile(saveFileDialog1.FileName); //запись файла на диск
+                richTextBox1.Modified = false;
+			
+			// проверка какая кнопка была нажата
+var MBox = MessageBox.Show( 
+                "Текст был изменен.\n" + "Сохранить изменения?", 
+                "Простой редактор", MessageBoxButtons.YesNoCancel, 
+                                    MessageBoxIcon.Exclamation); 
+            // YES — диалог:  NO — выход:  CANCEL — редактирование 
+            if (MBox == DialogResult.No) return; 
+            if (MBox == DialogResult.Cancel) e.Cancel = true; 
+            if (MBox == DialogResult.Yes) 
+			
+			 e.Cancel = true; // отменяем закрытие формы
+			 
+var ТекущийКаталог = System.IO.Directory.GetCurrentDirectory(); 
+// Читаем файл в строковую переменную: 
+                ВесьТекст = System.IO.File.ReadAllText(ТекущийКаталог + @"\convert1.txt");
+				
+// Во всем тексте заменяем точки на запятые, т. е. 
+            // можно вводить числа с точкой, а можно с запятой: 
+          ВесьТекст = ВесьТекст.Replace(".", ","); 
+            // В качестве сепаратора задаем: знаки табуляции '\t'), 
+            // перевод каретки '\r', '\n' и пробелы ' ': 
+          Char[] Сепаратор = { '\t', '\r', '\n', ' ' }; 
+          var Координаты = ВесьТекст.Split(Сепаратор,StringSplitOptions.RemoveEmptyEntries); 
+            // Теперь в каждом элементе массива Координаты() содержится 
+            // одна координата 
+		  var n = Координаты.Length; // — количество элементов массива
+			
+A = Double.TryParse(Координаты[j], out X[i]);
+
+textBox1.Multiline = true; 
+textBox1.Clear();
+
+this.Text = "Открытие текстового файла и его печать"; 
+            textBox1.Multiline = true; textBox1.Clear(); 
+            textBox1.Size = new Size(268, 112); 
+            textBox1.ScrollBars = ScrollBars.Vertical; 
+            textBox1.ReadOnly = true; 
+
+
+// Создание потока StreamReader для чтения из файла 
+                Читатель = new System.IO.StreamReader( 
+                               openFileDialog1.FileName, 
+                               System.Text.Encoding.GetEncoding(1251)); 
+                // — здесь заказ кодовой страницы Win1251 для русских букв 
+                textBox1.Text = Читатель.ReadToEnd(); 
+                Читатель.Close(); 
+                печатьToolStripMenuItem.Visible = true; 
+
+
