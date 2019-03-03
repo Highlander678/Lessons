@@ -104,3 +104,6 @@ foreach (string item in list)
 
 readonly CaseInsensitiveComparer comparer = new CaseInsensitiveComparer();
 comparer.Compare(x,y);
+
+DateTime time = DateTime.Now;
+TimeSpan timess = DateTime.Now - time;
