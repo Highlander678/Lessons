@@ -1,4 +1,4 @@
-this.Text = "Простой RTF-редактор"; 
+﻿this.Text = "Простой RTF-редактор"; 
 richTextBox1.Clear();
 
 openFileDialog1.FileName = @"D:\Text2.txt"; 
@@ -79,4 +79,31 @@ this.Text = "Открытие текстового файла и его печа
                 Читатель.Close(); 
                 печатьToolStripMenuItem.Visible = true; 
 
+Массив
+var anArray = new[] {"more","or","less"};
 
+Обход коллекци ArrayList
+var list = new ArrayList();
+#1
+for (int i = 0; i<list.count; i++)
+{Console.Writeline(list[i]);}
+
+#2
+IEnumerator enumerator = list.GetEnumerator();
+while (enumerator.MoveNext())
+{
+	Console.WriteLine(enumearor.Current);
+}
+
+#3
+foreach (string item in list)
+{
+	Console.WriteLine(item);
+}
+Категорически запрещено изменять - добавлять или удалть, или очищать элементы этой коллекции в случае обхода коллекции №2 и №3
+
+readonly CaseInsensitiveComparer comparer = new CaseInsensitiveComparer();
+comparer.Compare(x,y);
+
+DateTime time = DateTime.Now;
+TimeSpan timess = DateTime.Now - time;
