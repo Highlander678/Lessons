@@ -107,3 +107,29 @@ comparer.Compare(x,y);
 
 DateTime time = DateTime.Now;
 TimeSpan timess = DateTime.Now - time;
+
+
+Раннее и позднее связывание dll 
+
+Рефлексия 
+Assembly assembly = null;
+assembly = Assembly.Load("CarLibrary");
+Type type = assembly.GetType("CarLibrary.Minivan");
+dynamic carInstance = Activator.CreateInstance(type);
+carInstance.Acceleration();
+carInstance.Driver("Shumaher",26);
+
+Чтобы вызвать дополнительное диалоговое окно:
+var dialog = new FormDialog();
+Проверка по теме нажатой книпки
+if(dialog.ShowDialog() == DialogResult.Ok){}
+
+Шаблон NVI  (используем абстрактный метод для того чтобы вызывать private метод из класса,
+тем самым мы можем дополнять абстрактный метод новыми функциями этого класса)
+
+Stutic int sum(object v)
+{
+	int x = (int)v; // Даун каст объекта до int
+}
+
+
