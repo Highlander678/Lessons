@@ -15,8 +15,8 @@ namespace WindowsForms
         public Form1()
         {
             InitializeComponent();
-            this.BackColor = Color.Blue;
-            this.Opacity = 90;
+           // this.BackColor = Color.Blue;
+            //this.Opacity = 90;
             this.StartPosition = FormStartPosition.CenterScreen;
             //this.Size = new Size(300, 600);
             Button button2 = new System.Windows.Forms.Button();
@@ -34,6 +34,18 @@ namespace WindowsForms
         {
             Form2 form2 = new Form2(this);
             form2.Show();
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            Form2 form2 = new Form2();
+            form2.MdiParent = this;
+            form2.Show();
+        }
+
+        private void splitContainer1_Panel2_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
