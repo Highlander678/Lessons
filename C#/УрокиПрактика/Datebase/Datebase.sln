@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2003
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BaseCore", "BaseCore\BaseCore.csproj", "{2C218D68-A8F0-4899-A5B1-265983E557B5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeamPlayerAccess", "TeamPlayerAccess\TeamPlayerAccess.csproj", "{A774FD0E-10EF-4F01-A3C4-BE47A5AC65EC}"
+	ProjectSection(ProjectDependencies) = postProject
+		{2C218D68-A8F0-4899-A5B1-265983E557B5} = {2C218D68-A8F0-4899-A5B1-265983E557B5}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2C218D68-A8F0-4899-A5B1-265983E557B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C218D68-A8F0-4899-A5B1-265983E557B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C218D68-A8F0-4899-A5B1-265983E557B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C218D68-A8F0-4899-A5B1-265983E557B5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A774FD0E-10EF-4F01-A3C4-BE47A5AC65EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A774FD0E-10EF-4F01-A3C4-BE47A5AC65EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A774FD0E-10EF-4F01-A3C4-BE47A5AC65EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A774FD0E-10EF-4F01-A3C4-BE47A5AC65EC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C32254B1-EF30-41BF-8C47-3256588AB6EB}
+	EndGlobalSection
+EndGlobal
