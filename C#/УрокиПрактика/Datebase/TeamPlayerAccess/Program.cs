@@ -11,10 +11,10 @@ namespace TeamPlayerAccess
     {
         static void Main(string[] args)
         {
-            using (Context db = new BaseCore.Context())
+            using (Context db = new Context())
             {
 
-                var Команда = db.Teams.ToList(); // не отложенная операция, выполняется сразу
+                var Команда = db.Teams; // не отложенная операция, выполняется сразу
                 //Запрос с помощью методов расширения LINQ (Linq to Object)
                 var query = Команда.Where(tm => tm.Country == "Россия").
                             Select(tm => new { tm.Id, tm.Name });
@@ -42,6 +42,16 @@ namespace TeamPlayerAccess
 
                     Console.WriteLine("{0}. {1}", Id, item.Name);
                     Id++;
+                }
+                Console.ReadKey();
+
+                //Linq to Objects
+                var query_2 = Игроки.Where(pl => pl.Age >= 25).ToList().Where(pl => pl.Id > 3).
+                                Select(pl=> new {pl.Id,pl.Name });
+
+                foreach (var item in query_2)
+                {
+                    Console.WriteLine("{0}. {1}",item.Id,item.Name);
                 }
                 Console.ReadKey();
             }
