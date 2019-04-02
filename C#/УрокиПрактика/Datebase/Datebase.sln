@@ -18,6 +18,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Group", "Group\Group.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Intersect", "Intersect\Intersect.csproj", "{010BB7C9-8E50-44CD-B3E5-7F23C1A06A9A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Operations", "Operations\Operations.csproj", "{889077B0-FF61-4A48-9E24-3FB7DB580E23}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -48,6 +50,10 @@ Global
 		{010BB7C9-8E50-44CD-B3E5-7F23C1A06A9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{010BB7C9-8E50-44CD-B3E5-7F23C1A06A9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{010BB7C9-8E50-44CD-B3E5-7F23C1A06A9A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{889077B0-FF61-4A48-9E24-3FB7DB580E23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{889077B0-FF61-4A48-9E24-3FB7DB580E23}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{889077B0-FF61-4A48-9E24-3FB7DB580E23}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{889077B0-FF61-4A48-9E24-3FB7DB580E23}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
