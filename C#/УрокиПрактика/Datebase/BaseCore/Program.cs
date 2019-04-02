@@ -25,10 +25,10 @@ namespace BaseCore
                 db.SaveChanges();
 
                 Player player_1 = new Player { Id = 1, Name = "Александр", Age = 19 };
-                Player player_2 = new Player { Id = 2, Name = "Дмитрий", Age = 20 };
+                Player player_2 = new Player { Id = 2, Name = "Дмитрий", Age = 15 };
                 Player player_3 = new Player { Id = 3, Name = "Сергей", Age = 25 };
                 Player player_4 = new Player { Id = 4, Name = "Петр", Age = 26 };
-                Player player_5 = new Player { Id = 5, Name = "Данил", Age = 30 };
+                Player player_5 = new Player { Id = 5, Name = "Данил", Age = 12 };
 
                 db.Players.AddRange(new List<Player>
                         {
